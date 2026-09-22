@@ -395,7 +395,7 @@ Room Members
 
 A demonstration video showing the working of CodeSync will be available here:
 
-**YouTube:** : https://youtu.be/juMde2pQPOY
+**YouTube:** : https://youtu.be/RgaKHsvHCAc?si=QV_tcDnHx9DvMU77
 
 The video demonstrates the CodeSync workflow, including room creation/joining, collaborative coding, real-time synchronization, code execution, AI assistance, and output/error sharing.
 
