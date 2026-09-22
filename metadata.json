@@ -1,0 +1,6 @@
+{
+  "name": "CodeSync",
+  "description": "Real-time collaborative code editor with instant code execution, live cursor tracking, AI coding assistance, voice chat, and activity logging.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
