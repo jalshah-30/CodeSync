@@ -1,0 +1,278 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #000000;
+  --bg-soft: #07090A;
+  --surface: #121416;
+  --card: #17191A;
+  --card-2: #202224;
+  --card-3: #292C2D;
+  --border: #1E2021;
+  --border-strong: #39393B;
+  --accent: #0DCC5C;
+  --accent-hover: #0FD05B;
+  --accent-soft: #20B25F;
+  --accent-deep: #0D6430;
+  --accent-deeper: #045F2A;
+  --text: #FFFFFF;
+  --text-muted: #7F867F;
+  --text-dim: #7E7E80;
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-ink: #FFFFFF;
+  --color-base: #000000;
+  --color-mint: #0DCC5C;
+  --color-stone: #7F867F;
+  --color-editor: #07090A;
+}
+
+/* Explicit Token Utility Fallbacks */
+.bg-ink { background-color: #0DCC5C !important; }
+.text-ink { color: #FFFFFF !important; }
+.border-ink { border-color: #0DCC5C !important; }
+
+.bg-base { background-color: #000000 !important; }
+.text-base { color: #FFFFFF !important; }
+.border-base { border-color: #1E2021 !important; }
+
+.bg-mint { background-color: #17191A !important; }
+.text-mint { color: #0DCC5C !important; }
+.border-mint { border-color: #1E2021 !important; }
+
+.bg-stone { background-color: #202224 !important; }
+.text-stone { color: #7F867F !important; }
+.border-stone { border-color: #1E2021 !important; }
+
+.bg-editor { background-color: #07090A !important; }
+.text-editor { color: #FFFFFF !important; }
+.border-editor { border-color: #1E2021 !important; }
+
+/* Bento card styling */
+.panel-card {
+  background-color: #17191A;
+  border: 1px solid #1E2021;
+  border-radius: 20px;
+}
+.panel-card:hover {
+  border-color: #39393B;
+}
+
+/* Feature Green Card */
+.feature-card-green {
+  background: linear-gradient(135deg, #0D6430, #045F2A);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.feature-card-green::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 0);
+  background-size: 16px 16px;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* Hero Top Radial Glow */
+.hero-radial-glow {
+  background-image: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(13, 204, 92, 0.22), transparent 70%);
+}
+
+/* Primary Green Button */
+.btn-accent {
+  background-color: #0DCC5C;
+  color: #03110A;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+.btn-accent:hover {
+  background-color: #0FD05B;
+  box-shadow: 0 0 24px rgba(13, 204, 92, 0.35);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #070908;
+  border: 1px solid #1E2021;
+  color: #FFFFFF;
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: #17191A;
+  border-color: #39393B;
+}
+
+/* Outline Green Button */
+.btn-outline-green {
+  background-color: transparent;
+  border: 1px solid #0DCC5C;
+  color: #0DCC5C;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+.btn-outline-green:hover {
+  background-color: rgba(13, 204, 92, 0.1);
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #292C2D;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #39393B;
+}
+
+/* Collaborative Remote Cursor Pulse */
+@keyframes cursorPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.remote-cursor-line {
+  animation: cursorPulse 1.5s ease-in-out infinite;
+}
+
+/* Audio wave animation */
+@keyframes soundWave {
+  0%, 100% { height: 4px; }
+  50% { height: 20px; }
+}
+
+.audio-bar-1 { animation: soundWave 0.8s ease-in-out infinite 0.1s; }
+.audio-bar-2 { animation: soundWave 0.9s ease-in-out infinite 0.3s; }
+.audio-bar-3 { animation: soundWave 0.7s ease-in-out infinite 0.2s; }
+.audio-bar-4 { animation: soundWave 1.1s ease-in-out infinite 0.4s; }
+
+/* Markdown Body Palette Styling */
+.markdown-body {
+  color: #FFFFFF;
+  line-height: 1.65;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #1E2021;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.markdown-body h1:first-child,
+.markdown-body h2:first-child {
+  margin-top: 0;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7F867F;
+  margin-top: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.markdown-body p {
+  margin-bottom: 0.65rem;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-bottom: 0.65rem;
+  padding-left: 1.25rem;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+}
+
+.markdown-body li {
+  margin-bottom: 0.25rem;
+}
+
+.markdown-body code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.375rem;
+  background-color: #202224;
+  border: 1px solid #1E2021;
+  color: #0DCC5C;
+}
+
+.markdown-body pre {
+  margin: 0.65rem 0;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #17191A;
+  border: 1px solid #1E2021;
+  overflow-x: auto;
+  color: #FFFFFF;
+}
+
+.markdown-body pre code {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+}
+
+.markdown-body hr {
+  border: 0;
+  border-top: 1px solid #1E2021;
+  margin: 0.75rem 0;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid #0DCC5C;
+  padding-left: 0.75rem;
+  color: #7F867F;
+  margin: 0.5rem 0;
+}

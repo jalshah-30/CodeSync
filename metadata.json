@@ -1,0 +1,6 @@
+{
+  "name": "CodeSync",
+  "description": "Collaborative web-based code editor for remote STEM education with real-time multi-user editing, integrated video chat, beginner AI syntax error explainer, sandboxed code execution, automated code quality analysis, collaborative debugging, and learning progress tracking.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
