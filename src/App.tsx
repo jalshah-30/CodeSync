@@ -1060,13 +1060,6 @@ export default function App() {
                 <Sparkles className="w-5 h-5 text-[#03110A]" />
               </button>
               <button
-                onClick={() => setSidePanelTab("debug")}
-                title="Open Collaborative Debug"
-                className="p-2 rounded-xl bg-[#202224] text-[#7F867F] hover:text-[#FFFFFF] hover:bg-[#292C2D] transition border border-[#292C2D]"
-              >
-                <Bug className="w-5 h-5" />
-              </button>
-              <button
                 onClick={() => setSidePanelTab("chat")}
                 title="Open Classroom Chat"
                 className="p-2 rounded-xl bg-[#202224] text-[#7F867F] hover:text-[#FFFFFF] hover:bg-[#292C2D] transition border border-[#292C2D]"
@@ -1162,18 +1155,6 @@ export default function App() {
                   >
                     <Sparkles className={`w-3.5 h-3.5 ${sidePanelTab === "ai" ? "text-[#03110A]" : "text-[#7F867F]"}`} />
                     <span>AI Tutor</span>
-                  </button>
-
-                  <button
-                    onClick={() => setSidePanelTab("debug")}
-                    className={`flex items-center gap-1.5 px-3 py-1 rounded-full font-semibold transition ${
-                      sidePanelTab === "debug"
-                        ? "bg-[#0DCC5C] text-[#03110A] shadow-xs"
-                        : "text-[#7F867F] hover:text-[#FFFFFF] hover:bg-[#202224] font-medium"
-                    }`}
-                  >
-                    <Bug className={`w-3.5 h-3.5 ${sidePanelTab === "debug" ? "text-[#03110A]" : "text-[#7F867F]"}`} />
-                    <span>Debug</span>
                   </button>
 
                   <button
