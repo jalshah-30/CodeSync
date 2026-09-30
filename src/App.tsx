@@ -122,7 +122,13 @@ export default function App() {
   const [hasPassword, setHasPassword] = useState<boolean>(false);
 
   const [language, setLanguage] = useState<SupportedLanguage>("python");
-  const [theme, setTheme] = useState<EditorTheme>("ocean-cream");
+  const [theme, setTheme] = useState<EditorTheme>(() => {
+    return (localStorage.getItem("codesync_editor_theme") as EditorTheme) || "ocean-cream";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("codesync_editor_theme", theme);
+  }, [theme]);
   const [fontSize, setFontSize] = useState<number>(15);
   const [code, setCode] = useState<string>(STEM_LABS[0].starterCode.python);
   const [lineAuthors, setLineAuthors] = useState<Record<number, LineAuthor>>(() =>

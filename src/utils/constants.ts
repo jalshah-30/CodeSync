@@ -3,25 +3,108 @@ import { SupportedLanguage, EditorTheme } from "../types";
 export const SUPPORTED_LANGUAGES: Array<{ id: SupportedLanguage; name: string; extension: string }> = [
   { id: "python", name: "Python 3", extension: ".py" },
   { id: "javascript", name: "JavaScript", extension: ".js" },
-  { id: "typescript", name: "TypeScript", extension: ".ts" },
   { id: "cpp", name: "C++", extension: ".cpp" },
   { id: "java", name: "Java", extension: ".java" },
-  { id: "go", name: "Go", extension: ".go" },
-  { id: "rust", name: "Rust", extension: ".rs" },
-  { id: "html", name: "HTML5", extension: ".html" },
-  { id: "css", name: "CSS3", extension: ".css" },
-  { id: "sql", name: "SQL", extension: ".sql" },
-  { id: "bash", name: "Bash / Shell", extension: ".sh" },
 ];
 
-export const EDITOR_THEMES: Array<{ id: EditorTheme; name: string; bg: string; text: string }> = [
-  { id: "ocean-cream", name: "Index Green", bg: "bg-[#000000]", text: "text-[#0DCC5C]" },
-  { id: "vs-dark", name: "VS Dark Modern", bg: "bg-[#1e1e2e]", text: "text-slate-100" },
-  { id: "monokai", name: "Monokai Pro", bg: "bg-[#272822]", text: "text-[#f8f8f2]" },
-  { id: "dracula", name: "Dracula Official", bg: "bg-[#282a36]", text: "text-[#f8f8f2]" },
-  { id: "github-dark", name: "GitHub Dark", bg: "bg-[#0d1117]", text: "text-[#c9d1d9]" },
-  { id: "solarized-dark", name: "Solarized Dark", bg: "bg-[#002b36]", text: "text-[#839496]" },
-  { id: "twilight", name: "Twilight Glow", bg: "bg-[#141414]", text: "text-[#f8f8f8]" },
+export interface ThemeConfig {
+  id: EditorTheme;
+  name: string;
+  bg: string;
+  headerBg: string;
+  gutterBg: string;
+  gutterBorder: string;
+  gutterText: string;
+  textColor: string;
+  border: string;
+  currentLineBg: string;
+}
+
+export const EDITOR_THEMES: ThemeConfig[] = [
+  {
+    id: "ocean-cream",
+    name: "Index Green",
+    bg: "#07090A",
+    headerBg: "#121416",
+    gutterBg: "#07090A",
+    gutterBorder: "#1E2021",
+    gutterText: "#7F867F",
+    textColor: "#FFFFFF",
+    border: "#1E2021",
+    currentLineBg: "#202224",
+  },
+  {
+    id: "vs-dark",
+    name: "VS Dark Modern",
+    bg: "#1E1E1E",
+    headerBg: "#252526",
+    gutterBg: "#1E1E1E",
+    gutterBorder: "#2D2D2D",
+    gutterText: "#858585",
+    textColor: "#D4D4D4",
+    border: "#2D2D2D",
+    currentLineBg: "#2A2D2E",
+  },
+  {
+    id: "monokai",
+    name: "Monokai Pro",
+    bg: "#272822",
+    headerBg: "#1E1F1C",
+    gutterBg: "#272822",
+    gutterBorder: "#3E3D32",
+    gutterText: "#90908A",
+    textColor: "#F8F8F2",
+    border: "#3E3D32",
+    currentLineBg: "#3E3D32",
+  },
+  {
+    id: "dracula",
+    name: "Dracula Official",
+    bg: "#282A36",
+    headerBg: "#21222C",
+    gutterBg: "#282A36",
+    gutterBorder: "#44475A",
+    gutterText: "#6272A4",
+    textColor: "#F8F8F2",
+    border: "#44475A",
+    currentLineBg: "#44475A",
+  },
+  {
+    id: "github-dark",
+    name: "GitHub Dark",
+    bg: "#0D1117",
+    headerBg: "#161B22",
+    gutterBg: "#0D1117",
+    gutterBorder: "#30363D",
+    gutterText: "#8B949E",
+    textColor: "#C9D1D9",
+    border: "#30363D",
+    currentLineBg: "#21262D",
+  },
+  {
+    id: "solarized-dark",
+    name: "Solarized Dark",
+    bg: "#002B36",
+    headerBg: "#073642",
+    gutterBg: "#002B36",
+    gutterBorder: "#073642",
+    gutterText: "#586E75",
+    textColor: "#839496",
+    border: "#073642",
+    currentLineBg: "#073642",
+  },
+  {
+    id: "twilight",
+    name: "Twilight Glow",
+    bg: "#141414",
+    headerBg: "#1F1F1F",
+    gutterBg: "#141414",
+    gutterBorder: "#2A2A2A",
+    gutterText: "#555555",
+    textColor: "#F8F8F8",
+    border: "#2A2A2A",
+    currentLineBg: "#262626",
+  },
 ];
 
 export const FONT_SIZES = [12, 14, 15, 16, 18, 20, 22];

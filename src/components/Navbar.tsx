@@ -82,20 +82,17 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="flex items-center gap-4">
         {/* Brand */}
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-xl bg-[#202224] border border-[#1E2021] flex items-center justify-center">
-            <Code2 className="w-5 h-5 text-[#0DCC5C]" />
+          <div className="w-9 h-9 rounded-xl bg-[#202224] border border-[#1E2021] flex items-center justify-center p-1 overflow-hidden">
+            <img src="/akatsuki-cloud.jpg" alt="Akatsuki Cloud" className="w-full h-full object-contain rounded-lg" />
           </div>
           <div>
             <div className="flex items-center gap-2">
               <span className="font-extrabold text-base tracking-tight text-[#FFFFFF]">
                 Code<span className="text-[#7F867F]">Sync</span>
               </span>
-              <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-[#202224] text-[#0DCC5C] border border-[#1E2021]">
-                STUDIO
-              </span>
             </div>
             <p className="text-[11px] text-[#7F867F] leading-none hidden sm:block font-medium">
-              Collaborative STEM Code Editor
+              Collaborative Code Editor
             </p>
           </div>
         </div>

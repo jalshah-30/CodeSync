@@ -192,8 +192,8 @@ export const TeamLobby: React.FC<TeamLobbyProps> = ({
       {/* Top Header */}
       <header className="w-full max-w-5xl flex items-center justify-between py-4 mb-8 border-b border-[#1E2021]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-[#202224] border border-[#1E2021] text-[#0DCC5C] flex items-center justify-center shadow-md">
-            <Code2 className="w-6 h-6 text-[#0DCC5C]" />
+          <div className="w-10 h-10 rounded-2xl bg-[#202224] border border-[#1E2021] flex items-center justify-center p-1 overflow-hidden shadow-md">
+            <img src="/akatsuki-cloud.jpg" alt="Akatsuki Cloud" className="w-full h-full object-contain rounded-lg" />
           </div>
           <div>
             <div className="flex items-center gap-2">
@@ -206,7 +206,7 @@ export const TeamLobby: React.FC<TeamLobbyProps> = ({
               </span>
             </div>
             <p className="text-xs text-[#7F867F] font-medium">
-              Collaborative STEM Code Editor & Video Classroom
+              Collaborative Code Editor & Video Classroom
             </p>
           </div>
         </div>
@@ -246,77 +246,6 @@ export const TeamLobby: React.FC<TeamLobbyProps> = ({
           >
             Create New Room
           </button>
-        </div>
-      </div>
-
-      {/* Index Bento Grid Showcase */}
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-        {/* Bento Tile 1: Green Feature Gradient Card */}
-        <div className="feature-card-green p-6 rounded-[24px] flex flex-col justify-between min-h-[180px] shadow-lg">
-          <div className="inline-block self-start px-2.5 py-1 rounded-full bg-black/30 border border-white/10 text-[11px] font-medium text-white">
-            Scalability
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-white mb-1.5 leading-snug">
-              Build Scalable Code with AI
-            </h3>
-            <p className="text-xs text-white/80 leading-relaxed font-normal">
-              Automated syntax error explainer, code quality analysis, and real-time execution.
-            </p>
-          </div>
-        </div>
-
-        {/* Bento Tile 2: Dark Bar Chart Card */}
-        <div className="panel-card p-6 rounded-[24px] flex flex-col justify-between min-h-[180px]">
-          <div>
-            <div className="text-xs font-semibold text-[#7F867F] mb-3 uppercase tracking-wider flex items-center gap-1.5">
-              <BarChart3 className="w-4 h-4 text-[#0DCC5C]" />
-              Execution Efficiency
-            </div>
-            {/* Green Bar Chart Graphic Motif */}
-            <div className="flex items-end gap-1.5 h-14 mb-3">
-              {[40, 65, 30, 85, 50, 95, 70, 100, 60, 80].map((h, i) => (
-                <div
-                  key={i}
-                  className="flex-1 bg-[#0DCC5C] rounded-t-sm"
-                  style={{ height: `${h}%`, opacity: 0.4 + (h / 100) * 0.6 }}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold text-[#FFFFFF]">90%</span>
-            <span className="text-xs text-[#7F867F] font-medium">faster debugging cycles</span>
-          </div>
-        </div>
-
-        {/* Bento Tile 3: Dark Stat Card */}
-        <div className="panel-card p-6 rounded-[24px] flex flex-col justify-between min-h-[180px]">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-[#7F867F] uppercase tracking-wider">
-              Live Team Room
-            </span>
-            <div className="flex -space-x-2">
-              <div className="w-7 h-7 rounded-full bg-[#0DCC5C] text-[#03110A] font-bold text-[11px] flex items-center justify-center border border-[#17191A]">
-                J
-              </div>
-              <div className="w-7 h-7 rounded-full bg-[#3b82f6] text-white font-bold text-[11px] flex items-center justify-center border border-[#17191A]">
-                S
-              </div>
-              <div className="w-7 h-7 rounded-full bg-[#ec4899] text-white font-bold text-[11px] flex items-center justify-center border border-[#17191A]">
-                A
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <CheckCircle2 className="w-4 h-4 text-[#0DCC5C]" />
-              <span className="text-xs font-semibold text-[#FFFFFF]">Sync Completed</span>
-            </div>
-            <p className="text-xs text-[#7F867F] font-normal leading-relaxed">
-              Multi-user cursor tracking with audio/video room capability.
-            </p>
-          </div>
         </div>
       </div>
 

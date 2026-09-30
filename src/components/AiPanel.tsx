@@ -182,7 +182,6 @@ export const AiPanel: React.FC<AiPanelProps> = ({
                 Gemini
               </span>
             </h2>
-            <p className="text-[11px] text-[#7F867F] font-medium">STEM Code Assistant & Quality Analysis</p>
           </div>
         </div>
 
